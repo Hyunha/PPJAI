@@ -23,6 +23,20 @@ public class MovingBall {
 		container = box;
 	}
 	
+	/** Constructor MovingBall - 공 만들기 
+	 * @param x_initial - 공의 중심 x 좌표
+	 * @param y_initial - 공의 중심 y 좌표
+	 * @param r - 공의 반지름 
+	 * @param box - 공이 살고 있는 상자 */
+	public MovingBall(int x_initial, int y_initial, int x_velo, int y_velo, int r, Box box) {
+		x_pos = x_initial;
+		x_pos = y_initial;
+		x_velocity = x_velo;
+		y_velocity = y_velo;
+		radius = r;
+		container = box;
+	}
+	
 	/** xPosition - 공의 x축 위치 리턴 */
 	public int xPosition() {
 		return x_pos;

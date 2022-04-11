@@ -12,6 +12,7 @@ public class BounceTheBall {
 		// 공을 상자의 적절한 위치에 둠 
 		MovingBall ball = new MovingBall((int)(box_size / 3.0),
                                          (int)(box_size / 5.0),
+                                         10, 4,
                                          balls_radius, box);
 		BallWriter ball_writer = new BallWriter(ball, Color.red);
 		BoxWriter box_writer  = new BoxWriter(box);
