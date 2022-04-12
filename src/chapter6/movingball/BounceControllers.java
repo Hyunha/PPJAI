@@ -24,6 +24,14 @@ public class BounceControllers {
 			delay(painting_delay);
             ball1.move(time_unit);
             ball2.move(time_unit);
+            double d =
+            	Math.sqrt(Math.pow(ball1.xPosition() - ball2.xPosition(), 2) +
+            			Math.pow(ball1.yPosition() - ball2.yPosition(), 2));
+            double r = Math.min(ball1.radiusOf(), ball2.radiusOf());
+            if (d <= r) {
+    			System.out.println("Boom!");
+    			System.exit(1);
+    		}
             System.out.println(ball1.xPosition() + ", " + ball1.yPosition());
             System.out.println(ball2.xPosition() + ", " + ball2.yPosition());
             writer.repaint();

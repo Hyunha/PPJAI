@@ -52,6 +52,16 @@ public class MovingBall {
 		return radius;
 	}
 	
+	/** setVelocityX - 공의 x축 속도 지정 */
+	public void setVelocityX(int x_velo) {
+		x_velocity = x_velo;
+	}
+	
+	/** setVelocityY - 공의 y축 속도 지정 */
+	public void setVelocityY(int y_velo) {
+		y_velocity = y_velo;
+	}
+	
 	/** move - time_unit 만큼 공을 이동, 벽에 부딪치면 방향을 바꿈
 	 * @param time_units - 프레임 사이의 시간 */
 	public void move(int time_units) {
