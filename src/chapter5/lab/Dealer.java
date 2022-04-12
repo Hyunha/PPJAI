@@ -1,7 +1,5 @@
 package chapter5.lab;
 
-import javax.swing.*;
-
 public class Dealer {
 	
 	public void dealDiceGame(Player p1, Player p2, GameBoard b, Registrar r) {		
@@ -25,7 +23,7 @@ public class Dealer {
 		// 주사위 굴리기 
 		first.play(new Dice());
 		second.play(new Dice());
-		// 승패 결정, 디스프레이 
+		// 승패 결정을 보여주기 
 		Dice d1 = first.rolled();
 		Dice d2 = second.rolled();
 		if (d1.twin() && d2.twin()) {
@@ -53,7 +51,7 @@ public class Dealer {
 				b.repaint();
 		}
 
-		if (r.wantToContnue() == 0) {
+		if (r.wantToContinue() == 0) {
 			p1.reset(); 
 			p2.reset();
 			this.dealDiceGame(p1, p2, b, r);
