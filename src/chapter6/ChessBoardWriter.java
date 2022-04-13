@@ -48,7 +48,7 @@ public class ChessBoardWriter extends JPanel {
 			for (int y = 0; y < rows; y = y + 1) { 
 				// loop invariant: x열의 y칸까지 그렸음 (x 증가 후, y 증가 전)
 				int y_position = start_y + y * size;
-				if ((x + y) % 2 == 0) // 빨간색 칠할 차례 
+				if ((x + y) % 2 == 0) // 검은색 칠할 차례 
 					g.setColor(Color.black);
 				else
 					g.setColor(Color.white);
