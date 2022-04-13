@@ -27,8 +27,8 @@ public class BounceControllers {
             double d =
             	Math.sqrt(Math.pow(ball1.xPosition() - ball2.xPosition(), 2) +
             			Math.pow(ball1.yPosition() - ball2.yPosition(), 2));
-            double r = Math.min(ball1.radiusOf(), ball2.radiusOf());
-            if (d <= r) {
+            int sum_of_radius = ball1.radiusOf() + ball2.radiusOf();
+            if (d <= sum_of_radius) {
     			System.out.println("Boom!");
     			System.exit(1);
     		}
