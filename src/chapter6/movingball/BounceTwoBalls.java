@@ -7,7 +7,7 @@ public class BounceTwoBalls {
 	public static void main(String[] args) { 
 		// 모델 객체 생성 
 		int box_size = 200;
-		int balls_radius = 6;
+		int balls_radius = 15;
 		Box box = new Box(box_size);
 		// 공을 상자의 적절한 위치에 둠 
 		MovingBall ball1 = new MovingBall((int)(box_size / 3.0),
@@ -15,7 +15,7 @@ public class BounceTwoBalls {
                                           5, 2,
                                           balls_radius, box);
 		MovingBall ball2 = new MovingBall((int)(box_size / 5.0),
-                					 	  (int)(box_size / 3.0),
+                					 	  (int)(box_size / 2.0),
                 					 	  2, 5,
                 					 	  balls_radius, box);
 		BallWriter ball_writer1 = new BallWriter(ball1, Color.red);
