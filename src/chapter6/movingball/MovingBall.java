@@ -62,6 +62,14 @@ public class MovingBall {
 		y_velocity = y_velo;
 	}
 	
+	public int getVeloX() {
+		return x_velocity;
+	}
+	
+	public int getVeloY() {
+		return y_velocity;
+	}
+	
 	/** move - time_unit 만큼 공을 이동, 벽에 부딪치면 방향을 바꿈
 	 * @param time_units - 프레임 사이의 시간 */
 	public void move(int time_units) {
