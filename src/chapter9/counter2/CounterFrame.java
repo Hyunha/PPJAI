@@ -1,0 +1,26 @@
+package chapter9.counter2;
+
+import java.awt.*;
+import javax.swing.*;
+
+public class CounterFrame extends JFrame {
+	private Counter count;
+	private JLabel label = new JLabel("count = 0");
+	
+	public CounterFrame(Counter c) {
+		count = c;
+		Container cp = getContentPane();
+		cp.setLayout(new FlowLayout());
+		cp.add(label);
+		cp.add(new CountButton("OK", count, this));
+		setTitle("Counter");
+		setSize(200,60);
+		setVisible(true);
+		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+	}
+	
+	/** update - 뷰 갱신 */
+	public void update() {
+		label.setText("count = " + count.countOf());
+	}
+}
